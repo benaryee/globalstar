@@ -60,7 +60,7 @@ export default function Contact() {
                 Message Sent!
               </h3>
               <p className="text-green-700 dark:text-green-400">
-                Thank you for reaching out. We'll get back to you soon.
+                Thank you for reaching out. We will get back to you soon.
               </p>
             </motion.div>
           ) : (
