@@ -22,7 +22,7 @@ export default function Home() {
       <StackedCards />
       <WhyChooseUs />
       <Testimonials />
-      <Pricing />
+      {/*<Pricing />*/}
       <FAQ />
       <CTA />
       <Contact />
