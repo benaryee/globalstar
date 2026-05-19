@@ -1,76 +1,129 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CreditCard, Building, BarChart3, Code } from 'lucide-react'
+import {
+  Zap,
+  Landmark,
+  Smartphone,
+  Banknote,
+  Repeat,
+  ShieldCheck,
+} from 'lucide-react'
+
+const services = [
+  {
+    icon: Zap,
+    title: 'Fast delivery',
+    description:
+      'Most transfers settle in under thirty seconds. If something goes wrong, we sort it out so your money does not get stuck.',
+    tag: 'Speed',
+    span: 'lg:col-span-2',
+  },
+  {
+    icon: Landmark,
+    title: 'Bank deposits',
+    description:
+      'Send straight into 200+ banks across Africa and beyond. We handle the account details for you.',
+    tag: 'Bank',
+    span: '',
+  },
+  {
+    icon: Smartphone,
+    title: 'Mobile wallets',
+    description:
+      'We support MTN MoMo, AirtelTigo Money, M-Pesa, Orange Money and most of the wallets your family uses.',
+    tag: 'Wallet',
+    span: '',
+  },
+  {
+    icon: Banknote,
+    title: 'Cash pickup',
+    description:
+      'Thousands of agent locations for people who would rather pick up cash close to home.',
+    tag: 'Cash',
+    span: 'lg:col-span-2',
+  },
+  {
+    icon: Repeat,
+    title: 'Recurring transfers',
+    description:
+      'Set up rent, school fees or monthly support once and we send the money on the same day each month.',
+    tag: 'Recurring',
+    span: '',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Strong security',
+    description:
+      'PIN, device and biometric checks on every transfer. Everything you send is encrypted end-to-end.',
+    tag: 'Security',
+    span: '',
+  },
+]
 
 export default function Services() {
-  const services = [
-    {
-      icon: CreditCard,
-      title: 'Digital Payments Integration',
-      description: 'Seamless payment solutions integrated with modern platforms for secure, fast transactions.',
-    },
-    {
-      icon: Building,
-      title: 'Business Account Setup Consulting',
-      description: 'Expert guidance on establishing and optimizing business accounts for maximum efficiency.',
-    },
-    {
-      icon: BarChart3,
-      title: 'Financial Data Analytics Dashboards',
-      description: 'Real-time insights and analytics to drive informed business decisions.',
-    },
-    {
-      icon: Code,
-      title: 'Secure API & Platform Solutions',
-      description: 'Robust, scalable API integrations and platform development for your business needs.',
-    },
-  ]
-
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-primary-50 via-white to-blue-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-            Our Services
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Comprehensive fintech solutions tailored to your business needs
-          </p>
-        </motion.div>
+    <section id="features" className="section relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-grid opacity-40 mask-fade-radial" />
+      <div className="container-wide">
+        <div className="mx-auto max-w-2xl text-center">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="eyebrow"
+          >
+            What you can do
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.05 }}
+            className="heading-2 mt-5 text-gradient-soft"
+          >
+            What you can do with Movara.
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.12 }}
+            className="lead mt-4"
+          >
+            A simple chat that covers the ways your family actually receives
+            money back home.
+          </motion.p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => {
-            const Icon = service.icon
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((s, i) => {
+            const Icon = s.icon
             return (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all"
+              <motion.article
+                key={s.title}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ delay: i * 0.05, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                className={`card card-hover group relative overflow-hidden p-6 ${s.span}`}
               >
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                  className="bg-gradient-to-br from-primary-600 to-blue-600 w-14 h-14 rounded-lg flex items-center justify-center mb-4"
-                >
-                  <Icon className="w-7 h-7 text-white" />
-                </motion.div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  {service.title}
+                <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-gradient-to-br from-wa-500/20 to-emerald-500/0 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative flex items-start justify-between">
+                  <span className="grid h-11 w-11 place-items-center rounded-xl border border-ink-200/70 dark:border-white/[0.08] bg-white/80 dark:bg-white/[0.04]">
+                    <Icon className="h-5 w-5 text-wa-600 dark:text-wa-400" />
+                  </span>
+                  <span className="rounded-full border border-ink-200/70 dark:border-white/[0.08] px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-ink-500 dark:text-ink-400">
+                    {s.tag}
+                  </span>
+                </div>
+                <h3 className="relative mt-6 font-display text-xl font-semibold tracking-tight">
+                  {s.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  {service.description}
+                <p className="relative mt-2 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
+                  {s.description}
                 </p>
-              </motion.div>
+              </motion.article>
             )
           })}
         </div>

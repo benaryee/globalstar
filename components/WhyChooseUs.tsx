@@ -1,86 +1,89 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Zap, Users, TrendingUp, Lock, Headphones } from 'lucide-react'
+import {
+  ShieldCheck,
+  Zap,
+  Users,
+  TrendingDown,
+  Lock,
+  Globe2,
+} from 'lucide-react'
+
+const reasons = [
+  {
+    icon: Zap,
+    title: 'Quicker than the app you replaced',
+    description:
+      'There is nothing to download and no PIN to forget. You just chat with us and the money goes.',
+  },
+  {
+    icon: TrendingDown,
+    title: 'The exchange rate you actually expect',
+    description:
+      'We show the same rate you see on Google, and we show the fee before you confirm.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Licensed and compliant',
+    description:
+      'We work with FCA-authorised payment institutions and audited payout partners in every country we serve.',
+  },
+  {
+    icon: Globe2,
+    title: 'Where your family actually banks',
+    description:
+      '200+ banks, the major mobile wallets and cash pickup across more than 40 countries.',
+  },
+  {
+    icon: Lock,
+    title: 'Encrypted end-to-end',
+    description:
+      'Your conversations and your transfers are both encrypted, so the details stay between you and us.',
+  },
+  {
+    icon: Users,
+    title: 'Support from real people',
+    description:
+      'When you need help, a real person replies on WhatsApp in the language your family speaks.',
+  },
+]
 
 export default function WhyChooseUs() {
-  const reasons = [
-    {
-      icon: Shield,
-      title: 'Trusted UK-registered company',
-      description: 'Officially registered and compliant with UK regulations',
-    },
-    {
-      icon: Zap,
-      title: 'Bespoke digital finance strategies',
-      description: 'Custom solutions tailored to your unique business needs',
-    },
-    {
-      icon: Lock,
-      title: 'Scalable & secure platforms',
-      description: 'Enterprise-grade security with room to grow',
-    },
-    {
-      icon: Users,
-      title: 'Expert consultancy support',
-      description: 'Dedicated team of fintech specialists',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Data-driven insights',
-      description: 'Make informed decisions with powerful analytics',
-    },
-    {
-      icon: Headphones,
-      title: '24/7 Support',
-      description: 'Always here when you need us most',
-    },
-  ]
-
   return (
-    <section id="why-choose-us" className="py-20 bg-white dark:bg-slate-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-            Why Choose Global Star
+    <section id="why-choose-us" className="section relative">
+      <div className="container-wide">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="eyebrow">Why Movara</span>
+          <h2 className="heading-2 mt-5 text-gradient-soft">
+            The money transfer app you do not have to install.
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Partner with us for excellence in fintech solutions
+          <p className="lead mt-4">
+            A few reasons families in more than 40 countries are choosing Movara.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason, index) => {
-            const Icon = reason.icon
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-ink-200/70 dark:border-white/[0.08] bg-ink-200/70 dark:bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-3">
+          {reasons.map((r, i) => {
+            const Icon = r.icon
             return (
               <motion.div
-                key={reason.title}
-                initial={{ opacity: 0, rotateY: -90 }}
-                whileInView={{ opacity: 1, rotateY: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group"
+                key={r.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ delay: i * 0.05, duration: 0.5 }}
+                className="group relative bg-white dark:bg-ink-950 p-7 transition-colors hover:bg-ink-50/60 dark:hover:bg-white/[0.02]"
               >
-                <div className="bg-gradient-to-br from-white to-primary-50 dark:from-slate-800 dark:to-slate-700 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all h-full border border-transparent hover:border-primary-500 dark:hover:border-primary-400">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-primary-600 dark:bg-primary-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
-                        {reason.title}
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">
-                        {reason.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <span className="grid h-10 w-10 place-items-center rounded-lg border border-ink-200/70 dark:border-white/[0.08] bg-white/80 dark:bg-white/[0.04] transition-transform group-hover:-translate-y-0.5">
+                  <Icon className="h-5 w-5 text-wa-600 dark:text-wa-400" />
+                </span>
+                <h3 className="mt-5 font-display text-lg font-semibold tracking-tight">
+                  {r.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
+                  {r.description}
+                </p>
               </motion.div>
             )
           })}
