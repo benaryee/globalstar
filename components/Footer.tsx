@@ -10,6 +10,7 @@ import {
   MessageCircle,
   Instagram,
 } from 'lucide-react'
+import { useWhatsAppLink } from '@/lib/whatsapp'
 
 const columns = [
   {
@@ -43,6 +44,7 @@ const columns = [
 
 export default function Footer() {
   const year = new Date().getFullYear()
+  const whatsappHref = useWhatsAppLink()
 
   return (
     <footer className="relative mt-10 overflow-hidden border-t border-ink-200/70 dark:border-white/[0.06] bg-ink-50/40 dark:bg-ink-950">
@@ -72,8 +74,8 @@ export default function Footer() {
             </p>
             <div className="mt-6 flex items-center gap-2">
               {[
-                { Icon: MessageCircle, href: 'https://wa.me/447000000000', label: 'WhatsApp' },
-                { Icon: Mail, href: 'mailto:hello@movara.app', label: 'Email' },
+                { Icon: MessageCircle, href: whatsappHref, label: 'WhatsApp' },
+                { Icon: Mail, href: 'mailto:info@globalstarsolutions.com', label: 'Email' },
                 { Icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
                 { Icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
                 { Icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
@@ -127,16 +129,16 @@ export default function Footer() {
           <div className="flex items-start gap-3 text-sm">
             <Building2 className="h-4 w-4 mt-0.5 text-wa-600 dark:text-wa-400" />
             <div>
-              <p className="font-medium">Movara Ltd</p>
+              <p className="font-medium">Movara is a product by Global Star Solutions Ltd</p>
               <p className="text-ink-500 dark:text-ink-400 text-xs mt-0.5">
-                Working with FCA-authorised payment partners
+                Authorised and regulated by the FCA
               </p>
             </div>
           </div>
           <div className="flex items-start gap-3 text-sm">
             <MapPin className="h-4 w-4 mt-0.5 text-wa-600 dark:text-wa-400" />
             <div>
-              <p className="font-medium">London, United Kingdom</p>
+              <p className="font-medium">181a North End, Croydon, England, CR0 1TP</p>
               <p className="text-ink-500 dark:text-ink-400 text-xs mt-0.5">
                 Sending money to more than 40 countries
               </p>
@@ -145,7 +147,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-ink-500 dark:text-ink-400">
-          <p>© {year} Movara Ltd. All rights reserved.</p>
+          <p>© {year} Global Star Solutions Ltd. All rights reserved.</p>
           <p>Made for people who send money home.</p>
         </div>
       </div>

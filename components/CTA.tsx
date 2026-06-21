@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, MessageCircle } from 'lucide-react'
+import { useWhatsAppLink } from '@/lib/whatsapp'
 
 export default function CTA() {
+  const whatsappHref = useWhatsAppLink()
   return (
     <section className="relative py-16 md:py-24">
       <div className="container-wide">
@@ -40,18 +42,14 @@ export default function CTA() {
             </p>
             <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                href="#contact"
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn px-6 py-3.5 bg-wa-500 text-white hover:bg-wa-600 hover:scale-[1.02] active:scale-[0.98] shadow-[0_12px_40px_-10px_rgba(37,211,102,0.6)]"
               >
                 <MessageCircle className="h-4 w-4" fill="currentColor" fillOpacity={0.2} />
                 Start on WhatsApp
                 <ArrowRight className="h-4 w-4" />
-              </a>
-              <a
-                href="#pricing"
-                className="btn px-6 py-3.5 border border-white/15 text-white hover:bg-white/10"
-              >
-                See fees
               </a>
             </div>
           </div>

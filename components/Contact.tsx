@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Send, CheckCircle2, Mail, MapPin, MessageCircle, ArrowRight } from 'lucide-react'
+import { useWhatsAppLink, WHATSAPP_DISPLAY } from '@/lib/whatsapp'
 
 export default function Contact() {
+  const whatsappHref = useWhatsAppLink()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -49,7 +51,7 @@ export default function Contact() {
             </p>
 
             <a
-              href="https://wa.me/447000000000"
+              href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex btn px-6 py-3.5 text-white bg-wa-500 hover:bg-wa-600 hover:scale-[1.02] active:scale-[0.98] shadow-[0_12px_40px_-10px_rgba(37,211,102,0.6)]"
@@ -63,19 +65,19 @@ export default function Contact() {
               <ContactItem
                 icon={MessageCircle}
                 label="WhatsApp"
-                value="+44 7000 000 000"
-                href="https://wa.me/447000000000"
+                value={WHATSAPP_DISPLAY}
+                href={whatsappHref}
               />
               <ContactItem
                 icon={Mail}
                 label="Email"
-                value="hello@movara.app"
-                href="mailto:hello@movara.app"
+                value="info@globalstarsolutions.com"
+                href="mailto:info@globalstarsolutions.com"
               />
               <ContactItem
                 icon={MapPin}
                 label="HQ"
-                value="London, United Kingdom"
+                value="181a North End, Croydon, England, CR0 1TP"
               />
             </ul>
           </div>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { ArrowRight, Send, Inbox, Activity, MessageCircle, CheckCheck } from 'lucide-react'
+import { useWhatsAppLink } from '@/lib/whatsapp'
 
 const tabs = [
   {
@@ -34,6 +35,7 @@ const tabs = [
 export default function Showcase() {
   const [active, setActive] = useState(tabs[0].id)
   const current = tabs.find((t) => t.id === active)!
+  const whatsappHref = useWhatsAppLink()
 
   return (
     <section id="showcase" className="section relative overflow-hidden">
@@ -109,7 +111,12 @@ export default function Showcase() {
                 </li>
               ))}
             </ul>
-            <a href="#contact" className="btn px-6 py-3.5 mt-8 text-white bg-wa-500 hover:bg-wa-600 hover:scale-[1.02] active:scale-[0.98] shadow-[0_12px_40px_-10px_rgba(37,211,102,0.6)]">
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn px-6 py-3.5 mt-8 text-white bg-wa-500 hover:bg-wa-600 hover:scale-[1.02] active:scale-[0.98] shadow-[0_12px_40px_-10px_rgba(37,211,102,0.6)]"
+            >
               <MessageCircle className="h-4 w-4" fill="currentColor" fillOpacity={0.2} />
               Try it on WhatsApp <ArrowRight className="h-4 w-4" />
             </a>

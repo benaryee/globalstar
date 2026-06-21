@@ -10,9 +10,11 @@ import {
   Send,
   MessageCircle,
 } from 'lucide-react'
+import { useWhatsAppLink } from '@/lib/whatsapp'
 
 export default function Hero() {
   const reduce = useReducedMotion()
+  const whatsappHref = useWhatsAppLink()
   const ref = useRef<HTMLElement | null>(null)
 
   const { scrollYProgress } = useScroll({
@@ -90,7 +92,9 @@ export default function Hero() {
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3"
           >
             <a
-              href="#contact"
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn px-6 py-3.5 text-white bg-wa-500 hover:bg-wa-600 hover:scale-[1.02] active:scale-[0.98] shadow-[0_12px_40px_-10px_rgba(37,211,102,0.6)]"
             >
               <MessageCircle className="h-4 w-4" fill="currentColor" fillOpacity={0.2} />

@@ -5,7 +5,6 @@ import {
   Zap,
   Landmark,
   Smartphone,
-  Banknote,
   Repeat,
   ShieldCheck,
 } from 'lucide-react'
@@ -34,14 +33,6 @@ const services = [
       'We support MTN MoMo, AirtelTigo Money, M-Pesa, Orange Money and most of the wallets your family uses.',
     tag: 'Wallet',
     span: '',
-  },
-  {
-    icon: Banknote,
-    title: 'Cash pickup',
-    description:
-      'Thousands of agent locations for people who would rather pick up cash close to home.',
-    tag: 'Cash',
-    span: 'lg:col-span-2',
   },
   {
     icon: Repeat,
