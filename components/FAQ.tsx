@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: 'Which countries can I send to?',
-    a: 'We currently send to more than 40 countries across Africa, with growing coverage in South Asia and Latin America. You can send to bank accounts, mobile wallets such as MTN MoMo, M-Pesa, Airtel and Orange, or cash pickup.',
+    a: 'We currently support the UK to Ghana corridor. You can send to Ghanaian bank accounts or mobile wallets such as MTN MoMo, Telecel Cash and AirtelTigo Money.',
   },
   {
     q: 'What happens if a transfer fails?',

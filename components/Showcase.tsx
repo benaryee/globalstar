@@ -19,8 +19,8 @@ const tabs = [
     label: 'Receive',
     icon: Inbox,
     title: 'They get the money the way they want it.',
-    body: 'Direct bank deposit, mobile money wallet, or cash pickup at thousands of agent locations across Africa.',
-    bullets: ['200+ banks supported', 'MTN MoMo, M-Pesa, Airtel, Orange', 'Cash pickup network'],
+    body: 'Direct bank deposit or mobile money wallet straight to your recipient in Ghana.',
+    bullets: ['GCB Bank, Ecobank and more', 'MTN MoMo, Telecel Cash, AirtelTigo Money', 'Fast and reliable payouts'],
   },
   {
     id: 'track',

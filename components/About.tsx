@@ -46,7 +46,7 @@ export default function About() {
             </p>
             <dl className="mt-8 grid grid-cols-3 gap-4">
               {[
-                { k: '40+', v: 'Countries we send to' },
+                { k: 'UK→GH', v: 'Our live corridor' },
                 { k: '< 30s', v: 'Average delivery time' },
                 { k: '£0', v: 'Fee on your first transfer' },
               ].map((s) => (

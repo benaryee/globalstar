@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
 
@@ -49,8 +48,6 @@ const corridors = [
 ]
 
 export default function Pricing() {
-  const [yearly, setYearly] = useState(true)
-
   return (
     <section id="pricing" className="section relative">
       <div className="container-wide">
@@ -63,36 +60,11 @@ export default function Pricing() {
             We charge a small flat fee and use the same exchange rate you see
             on Google. Nothing hidden.
           </p>
-
-          <div className="mt-8 inline-flex items-center gap-1 rounded-full border border-ink-200/70 dark:border-white/10 bg-white/60 dark:bg-white/[0.03] p-1 backdrop-blur">
-            {(['GBP', 'USD'] as const).map((label) => {
-              const isUSD = label === 'USD'
-              const active = yearly === isUSD
-              return (
-                <button
-                  key={label}
-                  onClick={() => setYearly(isUSD)}
-                  className="relative rounded-full px-4 py-1.5 text-sm font-medium"
-                >
-                  {active && (
-                    <motion.span
-                      layoutId="pricing-pill"
-                      className="absolute inset-0 rounded-full bg-wa-500 shadow-soft"
-                      transition={{ type: 'spring', stiffness: 380, damping: 32 }}
-                    />
-                  )}
-                  <span className={`relative ${active ? 'text-white' : 'text-ink-700 dark:text-ink-200'}`}>
-                    Send from {label}
-                  </span>
-                </button>
-              )
-            })}
-          </div>
         </div>
 
         <div className="mt-14 grid gap-5 lg:grid-cols-3 lg:items-stretch">
           {corridors.map((p, i) => {
-            const fee = yearly ? p.fee.usd : p.fee.gbp
+            const fee = p.fee.gbp
             return (
               <motion.div
                 key={p.name}

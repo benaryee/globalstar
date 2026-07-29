@@ -33,7 +33,7 @@ const reasons = [
     icon: Globe2,
     title: 'Where your family actually banks',
     description:
-      '200+ banks, the major mobile wallets and cash pickup across more than 40 countries.',
+      'GCB, Ecobank and other Ghanaian banks, plus MTN MoMo, Telecel Cash and AirtelTigo Money.',
   },
   {
     icon: Lock,
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
             The money transfer app you do not have to install.
           </h2>
           <p className="lead mt-4">
-            A few reasons families in more than 40 countries are choosing Movara.
+            A few reasons families around the world are choosing Movara.
           </p>
         </div>
 

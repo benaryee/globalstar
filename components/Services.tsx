@@ -22,7 +22,7 @@ const services = [
     icon: Landmark,
     title: 'Bank deposits',
     description:
-      'Send straight into 200+ banks across Africa and beyond. We handle the account details for you.',
+      'Send straight into Ghanaian bank accounts, including GCB Bank, Ecobank and more. We handle the account details for you.',
     tag: 'Bank',
     span: '',
   },
@@ -30,7 +30,7 @@ const services = [
     icon: Smartphone,
     title: 'Mobile wallets',
     description:
-      'We support MTN MoMo, AirtelTigo Money, M-Pesa, Orange Money and most of the wallets your family uses.',
+      'We support MTN MoMo, Telecel Cash and AirtelTigo Money, the three mobile wallets your family in Ghana is most likely to use.',
     tag: 'Wallet',
     span: '',
   },

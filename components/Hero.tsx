@@ -66,7 +66,7 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-wa-400 opacity-75" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-wa-500" />
               </span>
-              Now live in over 40 countries
+              Now live: UK → Ghana
             </span>
           </motion.div>
 

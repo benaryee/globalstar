@@ -120,7 +120,7 @@ export default function Contact() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Tola A."
+                        placeholder="Bernard A."
                       />
                       <Field
                         label="Email"
@@ -129,7 +129,7 @@ export default function Contact() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="you@example.com"
+                        placeholder="bernard@email.com"
                       />
                     </div>
                     <Field
@@ -138,7 +138,7 @@ export default function Contact() {
                       type="text"
                       value={formData.corridor}
                       onChange={handleChange}
-                      placeholder="e.g. UK → Nigeria"
+                      placeholder="e.g. UK → Ghana"
                     />
                     <div>
                       <label

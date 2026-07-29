@@ -129,9 +129,9 @@ export default function Footer() {
           <div className="flex items-start gap-3 text-sm">
             <Building2 className="h-4 w-4 mt-0.5 text-wa-600 dark:text-wa-400" />
             <div>
-              <p className="font-medium">Movara is a product by Global Star Solutions Ltd</p>
+              <p className="font-medium">Movara is the trading name of Global Star Solutions Ltd</p>
               <p className="text-ink-500 dark:text-ink-400 text-xs mt-0.5">
-                Authorised and regulated by the FCA
+                Registered agent of Glo Remit Ltd, an Authorised Payment Institution by the FCA, supervised by HMRC for AML
               </p>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function Footer() {
             <div>
               <p className="font-medium">181a North End, Croydon, England, CR0 1TP</p>
               <p className="text-ink-500 dark:text-ink-400 text-xs mt-0.5">
-                Sending money to more than 40 countries
+                Sending money from the UK to Ghana
               </p>
             </div>
           </div>

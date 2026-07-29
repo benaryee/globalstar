@@ -3,16 +3,16 @@
 import { motion } from 'framer-motion'
 
 const corridors = [
-  '🇬🇧 UK → 🇳🇬 NGN',
-  '🇺🇸 USA → 🇰🇪 KES',
-  '🇨🇦 Canada → 🇬🇭 GHS',
-  '🇪🇺 EU → 🇿🇦 ZAR',
-  '🇦🇺 Australia → 🇺🇬 UGX',
-  '🇩🇪 Germany → 🇨🇲 XAF',
-  '🇫🇷 France → 🇸🇳 XOF',
-  '🇮🇪 Ireland → 🇿🇼 ZWL',
-  '🇨🇭 Switzerland → 🇪🇹 ETB',
-  '🇸🇪 Sweden → 🇹🇿 TZS',
+  '🇬🇧 UK → 🇬🇭 Ghana',
+  '🇬🇧 GBP → 🇬🇭 GHS',
+  '🇬🇧 UK → 🇬🇭 Ghana',
+  '🇬🇧 GBP → 🇬🇭 GHS',
+  '🇬🇧 UK → 🇬🇭 Ghana',
+  '🇬🇧 GBP → 🇬🇭 GHS',
+  '🇬🇧 UK → 🇬🇭 Ghana',
+  '🇬🇧 GBP → 🇬🇭 GHS',
+  '🇬🇧 UK → 🇬🇭 Ghana',
+  '🇬🇧 GBP → 🇬🇭 GHS',
 ]
 
 export default function TrustedBy() {
@@ -25,7 +25,7 @@ export default function TrustedBy() {
           viewport={{ once: true }}
           className="text-center text-xs font-medium uppercase tracking-[0.18em] text-ink-500 dark:text-ink-400"
         >
-          Sending money to more than 40 countries, with more added each month
+          Sending money from the UK to Ghana
         </motion.p>
 
         <div className="relative mt-8 overflow-hidden">
